@@ -80,4 +80,29 @@ void main(List<String> args) {
     return soma + numero;
   });
   print(soma);
+
+  // Spread
+  final numeros3 = [11, 12, 13, 14, 15];
+  final numeros4 = [16, 17, 18, 19, 20];
+  final numeros5 = [
+    ...numeros3,
+    ...numeros4
+  ]; // or numeros3 + numeros4 or numeros3.addAll(numeros4)
+  print(numeros5);
+
+  // Collection if
+  var promocaoAtiva = true;
+
+  var produtos = [
+    'Arroz',
+    'Feijão',
+    if (promocaoAtiva) 'Macarrão',
+    // if (!promocaoAtiva) 'Carne'
+  ];
+  print(produtos);
+
+  // Collection for
+  var lista = [1, 2, 3, 4, 5];
+  var listaDobro = [for (var numero in lista) numero * 2];
+  print(listaDobro);
 }
